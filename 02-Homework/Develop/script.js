@@ -1,6 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// variables for each criteria of password
 const chars = {
   lowercase: "abcdefghijklmnopqrstuvwxyz",
   uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
@@ -8,8 +9,10 @@ const chars = {
   symbol: "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~",
 };
 
+// sets initial password as blank
 var passwordCharSet = "";
 
+// function to generate password using sequential steps
 function generatePassword() {
   var length = prompt(
     "Please enter a number from 8 to 128 for password length."
@@ -52,6 +55,7 @@ function generatePassword() {
   return password;
 }
 
+// displays password generated as a string value
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
