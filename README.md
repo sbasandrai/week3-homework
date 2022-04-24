@@ -13,3 +13,5 @@ SO THAT I can create a strong password that provides greater security
 ![Screenshot](./screenshot/03-javascript-homework-demo.png)
 
 ## Deployed URL
+
+https://sbasandrai.github.io/week3-homework/
