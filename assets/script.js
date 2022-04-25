@@ -14,15 +14,21 @@ var passwordCharSet = "";
 
 // function to generate password using sequential steps
 function generatePassword() {
-  var length = prompt(
-    "Please enter a number from 8 to 128 for password length."
+  var length = prompt("Please enter a password between 8 and 128 characters");
+
+  var nottooshort = length >= 8;
+  var nottoolong = length <= 128;
+
+  if (nottoolong && nottooshort) {
+  } else {
+    alert("Password is too long/short");
+    e.default.prevent();
+    window.close;
+  }
+
+  var lowercase = window.confirm(
+    "Would you like to use lowercase letters? Press ok for YES, cancel for NO"
   );
-  if (length < 8) {
-    alert("Too short");
-  } else
-    var lowercase = window.confirm(
-      "Would you like to use lowercase letters? Press ok for YES, cancel for NO"
-    );
   if (lowercase) {
     passwordCharSet += chars.lowercase;
   }
