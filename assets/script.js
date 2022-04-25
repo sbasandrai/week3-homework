@@ -53,6 +53,15 @@ function generatePassword() {
   if (numbers) {
     passwordCharSet += chars.number;
   }
+
+  if (passwordCharSet === "") {
+    alert(
+      "Please go back and select at least ONE condition to be used in password"
+    );
+    e.default.prevent();
+    window.close;
+  }
+
   var password = "";
   for (let i = 0; i < length; i++) {
     password +=
